@@ -51,7 +51,7 @@ class ReferencedEntityDiscoveryService implements ReferencedEntityDiscoveryServi
 
       if (empty($dcx_id)) {
         $exception = new FoundNonDcxEntityException('media', 'image', $referencedEntity->id());
-        watchdog_exception(__METHOD__, $exception);
+        watchdog_exception('dcx_track_media_usage', $exception);
         throw $exception;
       }
 
