@@ -5,7 +5,6 @@ namespace Drupal\dcx_track_media_usage;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Component\Plugin\PluginManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\dcx_track_media_usage\Exception\FoundNonDcxEntityException;
 
 /**
  * Class ReferencedEntityDiscoveryService.
@@ -49,17 +48,13 @@ class ReferencedEntityDiscoveryService implements ReferencedEntityDiscoveryServi
     foreach ($referencedEntities as $referencedEntity) {
       $dcx_id = $referencedEntity->field_dcx_id->value;
 
-      if (empty($dcx_id)) {
-        $exception = new FoundNonDcxEntityException('media', 'image', $referencedEntity->id());
-        watchdog_exception('dcx_track_media_usage', $exception);
-        throw $exception;
-      }
-
-      if ($return_entities) {
-        $usage[$dcx_id] = $referencedEntity;
-      }
-      else {
-        $usage[$dcx_id] = ['id' => $referencedEntity->id(), 'entity_type_id' => $referencedEntity->getEntityTypeid()];
+      if (!empty($dcx_id)) {
+        if ($return_entities) {
+          $usage[$dcx_id] = $referencedEntity;
+        }
+        else {
+          $usage[$dcx_id] = ['id' => $referencedEntity->id(), 'entity_type_id' => $referencedEntity->getEntityTypeid()];
+        }
       }
     }
 
