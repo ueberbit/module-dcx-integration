@@ -12,9 +12,12 @@ use Drupal\Core\Entity\EntityInterface;
  * Implements hook_ENTITY_TYPE_delete().
  */
 function dcx_migration_media_delete(EntityInterface $entity) {
-  // Remove the migrate map entry for this entity to allow remigration.
+  // Remove the migrate map entry for this entity to allow remigration if the
+  // table exists.
   $db = Database::getConnection('default');
-  $db->delete('migrate_map_dcx_migration')
-    ->condition('destid1', $entity->id())
-    ->execute();
+  if ($db->schema()->tableExists('migrate_map_dcx_migration')) {
+    $db->delete('migrate_map_dcx_migration')
+      ->condition('destid1', $entity->id())
+      ->execute();
+  }
 }
