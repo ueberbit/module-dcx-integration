@@ -1,5 +1,26 @@
 # Change Log
 
+## [8.x-2.0-beta4](https://github.com/BurdaMagazinOrg/module-dcx-integration/tree/8.x-2.0-beta4) (2017-10-23)
+[Full Changelog](https://github.com/BurdaMagazinOrg/module-dcx-integration/compare/8.x-2.0-beta3...8.x-2.0-beta4)
+
+**Closed issues:**
+
+- Article archive does not work [\#60](https://github.com/BurdaMagazinOrg/module-dcx-integration/issues/60)
+- Dropzone looks broken with Thunder's new Admin Theme [\#59](https://github.com/BurdaMagazinOrg/module-dcx-integration/issues/59)
+- Status page integration [\#53](https://github.com/BurdaMagazinOrg/module-dcx-integration/issues/53)
+- Remove drush command dcx-queue [\#49](https://github.com/BurdaMagazinOrg/module-dcx-integration/issues/49)
+
+**Merged pull requests:**
+
+- Hide prohibited images in collections [\#66](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/66) ([chrfritsch](https://github.com/chrfritsch))
+- Set all form fields required [\#65](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/65) ([chrfritsch](https://github.com/chrfritsch))
+- Integration changes [\#64](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/64) ([chrfritsch](https://github.com/chrfritsch))
+- Introduce changelog [\#63](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/63) ([chrfritsch](https://github.com/chrfritsch))
+- Remove drush command dcx-queue [\#62](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/62) ([chrfritsch](https://github.com/chrfritsch))
+- Dropzone broken [\#61](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/61) ([chrfritsch](https://github.com/chrfritsch))
+- Check server status [\#54](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/54) ([chrfritsch](https://github.com/chrfritsch))
+- Bugfix/inrel 1869: Avoid exception in case migrate\_map\_dcx\_migration does not exist. [\#46](https://github.com/BurdaMagazinOrg/module-dcx-integration/pull/46) ([killes](https://github.com/killes))
+
 ## [8.x-2.0-beta3](https://github.com/BurdaMagazinOrg/module-dcx-integration/tree/8.x-2.0-beta3) (2017-07-25)
 [Full Changelog](https://github.com/BurdaMagazinOrg/module-dcx-integration/compare/8.x-2.0-beta2...8.x-2.0-beta3)
 
